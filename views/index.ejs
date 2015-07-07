@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <table class="table">
+      <thead>
+        <th>HTTP verb</th>
+        <th>API Endpoint</th>
+        <th>Description</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td> GET</td>
+          <td> /jobs</td>
+          <td> List all the jobs in the database</td>
+        </tr>
+        <tr>
+          <td> GET</td>
+          <td> /jobs/:jobListing</td>
+          <td> Get a single job listing by ID</td>
+        </tr>
+        <tr>
+          <td> POST</td>
+          <td> /jobs</td>
+          <td> Create and save a new job listing to the database</td>
+        </tr>
+      </tbody>
+    </table>  
+
+  </body>
+</html>
