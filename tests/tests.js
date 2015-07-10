@@ -1,4 +1,6 @@
-var request = superagent;
+var app = require('express');
+var expect = require('expect.js');
+
 
 describe('Our API', function(){
   describe('POST empty data to /jobs', function(){

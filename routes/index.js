@@ -11,7 +11,7 @@ var Job = mongoose.model("Job", {
   slug: { type: String, required: true, unique: true },
   body: { type: String, required: true },
   email: { type: String, required: true },
-  gravatarUrl: { type: String, required: true },
+  keywords: { type: String },
   createdAt: { type: Date, default: Date.now },
 
 });
@@ -22,6 +22,9 @@ Job.on('index', function(err) {
   }
 });
 
+router.get('/upload', function(req, res, next) {
+  res.render('upload', { title: 'Mongo API' });
+});
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Mongo API' });
 });
